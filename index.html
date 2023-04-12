@@ -15,7 +15,7 @@
                 <button value="desencriptar">Desencriptar</button>
             </section>
             <section>
-                <div class="result">
+                <div id="result">
                 </div>
                 <button value="Copiar">Copiar</button>
             </section>
@@ -45,7 +45,9 @@
                 caracter=llaves(frase[i]);
                 fraseModif += caracter;
             }
-            document.write(fraseModif);
+            document.getElementById("result").innerHTML = fraseModif;
+            fraseModif="";
+            input.value="";
         }
         var input = document.querySelector("textarea");
         var boton = document.querySelector("button")
