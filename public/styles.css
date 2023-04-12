@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(52,53,65);
+    color: #CAD2D7;
+}
+main{
+    width: 940px;
+    margin: 0 auto;
+}
+header{
+    margin: 20px;
+}
+
+.area-encriptador{
+    width: auto;
+    display: inline-block;
+    padding: 10px;
+}
+
+.area-encriptador h1{
+    text-align: center;
+}
+
+.area-encriptador textarea{
+    font-family: 'Nunito';
+    font-size: 16px;
+    color:#CAD2D7;
+    background: none;
+    padding: 10px;
+    outline: none;
+    resize: none;
+    border:none;
+}
+.material-symbols-outlined {
+    vertical-align: bottom;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 30,
+  'opsz' 20
+}
+.botones{
+    margin-top: 20px;
+}
+.botones button{
+    background-color: #212121;
+    color: #A4AEB7;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 240px;
+    transition: 1s;
+}
+.botones button:hover{
+    background-color: #3D3C3C;
+}
+.area-resultado{
+    display: inline-block;
+    width: 35%;
+    vertical-align: top;
+    background-color: #212121;
+    box-shadow: 5px 10px 10px 0px #212120;
+    border-radius: 10px;
+    border: none;
+    margin: 0 0 0 50px;
+    overflow: auto;
+    height: 500px;
+    color: aliceblue;
+    justify-content:left;
+}
+#mensaje-oculto{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+#btnCopiar{
+    display: none;
+    position: absolute;
+    bottom: 90px;
+    right: 255px;
+}
+.btnCpr{
+    background-color:rgb(52,53,65);
+    color: #A4AEB7;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 240px;
+    transition: 1s;
+}
+.btnCpr:hover{
+    background-color:rgb(64, 65, 80);
+}
+ #result{
+    padding: 15px;
+ }
+ @media screen and (max-width:940px) {
+    header{
+        width: auto;
+        text-align: center;
+    }
+    main{
+        width: auto;
+        text-align: center;
+    }
+    .area-encriptador{
+       width: 80%;
+       margin: 0 auto;
+    }
+    .area-encriptador textarea{
+        width: 80%;
+    }
+
+    .area-resultado{
+        width: 80%;
+        margin: 10px 0;
+        height: 400px;
+    }
+    #btnCopiar{
+        position: relative;
+        top: 275px;
+        left: 0px;
+    }
+
+}

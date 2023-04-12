@@ -1,56 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UFT-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <title>Encriptador de Texto</title>
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="public/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     </head>
     <body>
         <main>
-            <section>
+            <header>
                 <h1>Encriptador</h1>
-                <textarea name="" id="" cols="70" rows="30"></textarea>
-                <button value="encriptar">Encriptar</button>
-                <button value="desencriptar">Desencriptar</button>
-            </section>
-            <section>
-                <div id="result">
+            </header>
+            <div class="area-encriptador">
+                <textarea placeholder="Ingrese el texto aquí" cols="60" rows="17"></textarea>
+                <p><span class="material-symbols-outlined">block</span> Solo letras minusculas y sin acento.</p>
+                <div class="botones">
+                    <button class="btnEncriptar">Encriptar</button>
+                    <button class="btnDesencriptar">Desencriptar</button>
                 </div>
-                <button value="Copiar">Copiar</button>
-            </section>
+            </div>
+            <div class="area-resultado">
+                <div id="result"></div>
+                <div id="mensaje-oculto">
+                    <p>Aqui no hay nada para mostrar</p>
+                </div>
+                <div id="btnCopiar">
+                    <button class="btnCpr">Copiar</button>
+                </div>
+            </div>
         </main>
     </body>
-    <script>
-        function llaves(letra){
-            if(letra=="a"){
-                return "ai";
-            }else if(letra=="e"){
-                return "enter";
-            }else if(letra=="i"){
-                return "imes";
-            }else if(letra=="o"){
-                return "ober";
-            }else if(letra=="u"){
-                return "ufat";
-            }else{
-                return letra;
-            }
-        }
-        let fraseModif="";
-        function encriptarTexto(){
-            
-            frase=input.value;
-            for (let i = 0; i < frase.length; i++) {
-                caracter=llaves(frase[i]);
-                fraseModif += caracter;
-            }
-            document.getElementById("result").innerHTML = fraseModif;
-            fraseModif="";
-            input.value="";
-        }
-        var input = document.querySelector("textarea");
-        var boton = document.querySelector("button")
-        boton.onclick=encriptarTexto;
-    </script>
+    <script src="public/encript.js"></script>
 </html>
