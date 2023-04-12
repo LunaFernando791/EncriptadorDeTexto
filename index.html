@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UFT-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador de Texto</title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <main>
+            <section>
+                <h1>Encriptador</h1>
+                <textarea name="" id="" cols="70" rows="30"></textarea>
+                <button value="encriptar">Encriptar</button>
+                <button value="desencriptar">Desencriptar</button>
+            </section>
+            <section>
+                <div class="result">
+                </div>
+                <button value="Copiar">Copiar</button>
+            </section>
+        </main>
+    </body>
+    <script>
+        function llaves(letra){
+            if(letra=="a"){
+                return "ai";
+            }else if(letra=="e"){
+                return "enter";
+            }else if(letra=="i"){
+                return "imes";
+            }else if(letra=="o"){
+                return "ober";
+            }else if(letra=="u"){
+                return "ufat";
+            }else{
+                return letra;
+            }
+        }
+        let fraseModif="";
+        function encriptarTexto(){
+            
+            frase=input.value;
+            for (let i = 0; i < frase.length; i++) {
+                caracter=llaves(frase[i]);
+                fraseModif += caracter;
+            }
+            document.write(fraseModif);
+        }
+        var input = document.querySelector("textarea");
+        var boton = document.querySelector("button")
+        boton.onclick=encriptarTexto;
+    </script>
+</html>
