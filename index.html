@@ -16,7 +16,7 @@
                 <h1>Encriptador</h1>
             </header>
             <div class="area-encriptador">
-                <textarea placeholder="Ingrese el texto aquí" cols="60" rows="17"></textarea>
+                <textarea placeholder="Ingrese el texto aquí" cols="60" rows="17" pattern="[a-z ]*" oninput="this.value = this.value.replace(/[^a-z\n ]/g, '')"></textarea>
                 <p><span class="material-symbols-outlined">block</span> Solo letras minusculas y sin acento.</p>
                 <div class="botones">
                     <button class="btnEncriptar">Encriptar</button>
