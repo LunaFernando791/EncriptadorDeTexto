@@ -73,6 +73,11 @@ header{
     color: aliceblue;
     justify-content:left;
 }
+
+.warning{
+    width: 128px;
+    height: 128px;
+}
 #mensaje-oculto{
     text-align: center;
     width: 100%;
